@@ -28,12 +28,12 @@ function loadTransactions() {
   transactions.forEach((tx, i) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <div>
-        <strong>${tx.type === "income" ? "🟢" : "🔴"} ₹${tx.amount}</strong> - ${tx.category} (${tx.date})
-        ${tx.note ? `<br><small>📝 ${tx.note}</small>` : ""}
-      </div>
-      <button onclick="deleteTransaction(${i})">❌</button>
-    `;
+  <div>
+    ${tx.type === "income" ? "🟢" : "🔴"} ₹${tx.amount} | ${tx.category} | ${tx.date}
+    ${tx.note ? `<br><small>📝 ${tx.note}</small>` : ""}
+  </div>
+  <button onclick="deleteTransaction(${i})">❌</button>
+`;
     list.appendChild(li);
   });
 }
