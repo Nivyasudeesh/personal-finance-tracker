@@ -3,25 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Finance Tracker</title>
+  <title>Finance Tracker</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>💰 Personal Finance Tracker</h1>
+    <h1>💸 Personal Finance Tracker</h1>
+
     <form id="transactionForm">
-      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="number" id="amount" placeholder="Enter amount" required />
       <select id="type">
         <option value="income">Income</option>
         <option value="expense">Expense</option>
       </select>
       <input type="text" id="category" placeholder="Category" required />
       <input type="date" id="date" required />
-      <input type="text" id="note" placeholder="Note (optional)" />
-      <button type="submit">Add Transaction</button>
+      <input type="text" id="note" placeholder="Optional note" />
+      <button type="submit">➕ Add Transaction</button>
     </form>
 
-    <h2>📜 Transactions</h2>
+    <div class="controls">
+      <h2>📋 Recent Transactions</h2>
+      <button class="danger-btn" onclick="clearAll()">🗑️ Clear All</button>
+    </div>
+
     <ul id="transactionList"></ul>
 
     <a href="summary.html" class="link-btn">➡️ Go to Summary</a>
