@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Finance Summary</title>
+  <title>Summary</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>📊 Summary Dashboard</h1>
+    <h1>📊 Financial Summary</h1>
     <div class="summary">
-      <p><strong>Total Income:</strong> ₹<span id="totalIncome">0</span></p>
-      <p><strong>Total Expenses:</strong> ₹<span id="totalExpense">0</span></p>
-      <p><strong>Balance:</strong> ₹<span id="balance">0</span></p>
+      <div class="card green">Total Income: ₹<span id="totalIncome">0</span></div>
+      <div class="card red">Total Expenses: ₹<span id="totalExpense">0</span></div>
+      <div class="card blue">Balance: ₹<span id="balance">0</span></div>
     </div>
-    <canvas id="categoryChart" width="400" height="200"></canvas>
+
+    <canvas id="categoryChart"></canvas>
 
     <a href="index.html" class="link-btn">⬅️ Back to Add</a>
   </div>
