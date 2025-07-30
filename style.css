@@ -1,71 +1,124 @@
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f8fa;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
   color: #333;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 700px;
+  margin: 2rem auto;
   padding: 2rem;
-  background: white;
-  border-radius: 10px;
-  margin-top: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
   text-align: center;
-  color: #0a74da;
+  color: #2d3e50;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 1rem;
 }
 
 input, select, button {
   padding: 10px;
   font-size: 1rem;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  outline: none;
 }
 
 button {
   background-color: #0a74da;
   color: white;
-  border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background-color: #0556aa;
 }
 
+.danger-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  margin-left: auto;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .link-btn {
   display: block;
   text-align: center;
-  margin-top: 20px;
-  text-decoration: none;
+  margin: 2rem auto 0;
   background: #0a74da;
   color: white;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 10px 15px;
+  width: fit-content;
+  border-radius: 8px;
+  text-decoration: none;
 }
 
-#transactionList {
+ul#transactionList {
   list-style: none;
   padding: 0;
+  margin-top: 1rem;
 }
 
-#transactionList li {
-  background: #f1f1f1;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 6px;
+ul#transactionList li {
+  background: #f7f7f7;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  margin: 1.5rem 0;
+}
+
+.card {
+  flex: 1 1 30%;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.green { background: #28a745; }
+.red { background: #dc3545; }
+.blue { background: #007bff; }
+
+@media (max-width: 600px) {
+  .summary {
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
